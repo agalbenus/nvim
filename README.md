@@ -15,7 +15,7 @@ $ sudo apt-get install neovim
 Once you have Neovim setup, you should clone the configuration repository.
 
 ```sh
-$ git clone git@github.com:eknowlton/nvim-config-simple.git ~/.config/nvim
+$ git clone https://github.com/agalbenus/nvim.git ~/.config/nvim
 ```
 
 Next, install the VIM Plug plugin manager.
