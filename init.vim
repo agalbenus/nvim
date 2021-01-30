@@ -20,6 +20,15 @@ set shiftwidth=4
 set smartindent
 set smarttab
 set softtabstop=4
+let mapleader = "."
+
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+nnoremap <Leader>ww :e ~/Documents/notes/index.md<cr>
  
 set backspace=indent,eol,start
 
