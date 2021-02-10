@@ -1,19 +1,19 @@
 " Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
 "   nvim setup dependencie:
 "       - fzf -> for fuzy search
-"       - ripgreap
+"       - ripgrep
 "       - task (for task management)
 "       - tasklib -> integrates task with taskwiki plugin
 "
 call plug#begin('~/.vim/plugged')
 
+Plug 'preservim/tagbar'
 Plug 'preservim/nerdtree'
 Plug 'hashivim/vim-vagrant'
 Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
 Plug 'pearofducks/ansible-vim'
+let g:deoplete#enable_at_startup = 1
 "Plug '907th/vim-auto-save'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -26,6 +26,7 @@ Plug 'tbabej/taskwiki'
 Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
 Plug 'pedrohdz/vim-yaml-folds'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

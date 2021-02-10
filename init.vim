@@ -31,6 +31,35 @@ let mapleader = ","
 
 let g:vimwiki_list = [{'path':"~/Documents/notes", 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:ale_completion_enabled = 0
+
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
 
 " Makes vimwiki markdonw links as [test](text.md) instead of [text](text)
 let g:taskwiki_markup_syntax = 'markdown'
@@ -50,6 +79,7 @@ let g:NERDTreeDirArrows=0
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufRead *.go set foldmethod=syntax 
 " au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
 
